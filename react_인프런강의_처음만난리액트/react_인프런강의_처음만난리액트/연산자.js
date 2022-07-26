@@ -11,4 +11,4 @@ console.log(a)
 console.log(b)
 //출력 결과 : 20
 //변경 되나 보자
-console.log(a);
+console.log(b)
