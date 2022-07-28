@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <span>Total clicks: 0</span>
+    <button id="btn">Click me!</button>
+</body>
+<script>
+    let counter = 0;
+    const button = document.getElementById("btn");
+    const span = document.querySelector("span");
+    function handleClick() {
+        counter = counter + 1;
+        span.innerText = counter; //innerText 사용하면 span의 텍스트를 변경할 수 있다. 
+    }
+    button.addEventListener("click", handleClick)
+</script>
+
+</html>
