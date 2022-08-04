@@ -16,10 +16,11 @@ import SignUp from './chapter_11/SignUp';
 import Calculator from './chapter_12/Calculator';
 import ProfileCard from './chapter_13/ProfileCard';
 import DarkOrLight from './chapter_14/DarkOrLight';
+import Blocks from './chapter_15/Blocks';
 
 ReactDOM.render( //import한 컴포넌트를 ReactDOM.render 함수에 넣어줌
   <React.StrictMode>
-    <DarkOrLight /> 
+    <Blocks /> 
   </React.StrictMode>,
   document.getElementById('root')
 );
