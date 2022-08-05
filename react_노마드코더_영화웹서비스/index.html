@@ -2,18 +2,18 @@
 <html>
 
 <body>
-    <span>Total clicks: 0</span>
+    <span>Total Clicks: 0</span>
     <button id="btn">Click me!</button>
 </body>
 <script>
     let counter = 0;
     const button = document.getElementById("btn");
-    const span = document.querySelector("span");
+    const span = document.querySelector("span"); //화면에도 증가하는 숫자를 보여줘야 하므로 html에서 querySelector로 불러오기.
     function handleClick() {
         counter = counter + 1;
-        span.innerText = counter; //innerText 사용하면 span의 텍스트를 변경할 수 있다. 
+        span.innerText = `Total Clicks: ${counter}`; //innerText 사용하면 span의 텍스트를 변경할 수 있다. 
     }
-    button.addEventListener("click", handleClick)
+    button.addEventListener("click", handleClick);
 </script>
 
 </html>
