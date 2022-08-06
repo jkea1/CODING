@@ -2,18 +2,27 @@
 <html>
 
 <body>
-    <span>Total Clicks: 0</span>
-    <button id="btn">Click me!</button>
 </body>
-<script>
-    let counter = 0;
-    const button = document.getElementById("btn");
-    const span = document.querySelector("span"); //화면에도 증가하는 숫자를 보여줘야 하므로 html에서 querySelector로 불러오기.
-    function handleClick() {
-        counter = counter + 1;
-        span.innerText = `Total Clicks: ${counter}`; //innerText 사용하면 span의 텍스트를 변경할 수 있다. 
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    function App() {
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+            setCounter(counter + 1);
+        }
+        console.log("rendered") //클릭하면 컴포넌트가 rerender 되고, 변경된 state의 변수값이 출력될것이다. 
+        console.log(counter)
+        return (
+            <div>
+                <h3>Total clicks: {counter}</h3>
+                <button onClick={onClick}>Click me</button>
+            </div>
+        );
     }
-    button.addEventListener("click", handleClick);
+    const root = document.getElementById("root");
+    ReactDOM.render(</App >, root);
 </script>
 
 </html>
