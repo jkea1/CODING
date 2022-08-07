@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<body>
-</body>
-<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<body></body>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
     function App() {
         const [counter, setCounter] = React.useState(0);
         const onClick = () => {
             setCounter(counter + 1);
-        }
-        console.log("rendered") //클릭하면 컴포넌트가 rerender 되고, 변경된 state의 변수값이 출력될것이다. 
-        console.log(counter)
+        };
+        console.log("rendered"); //클릭하면 컴포넌트가 rerender 되고, 변경된 state의 변수값이 출력될것이다. 
+        console.log(counter);
         return (
             <div>
                 <h3>Total clicks: {counter}</h3>
@@ -21,8 +20,8 @@
             </div>
         );
     }
-    const root = document.getElementById("root");
-    ReactDOM.render(</App >, root);
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
 </script>
 
 </html>
