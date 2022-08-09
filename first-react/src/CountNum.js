@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import "./App.css";
-import Box from './component/Box';
 
 //state가 바뀌면 UI가 다시 렌더링됨(다시 그려줌)
 //변수는 바로 바뀌지만(동기적) state는 state를 바꿔주는 set함수들은 모아놨다가 부모함수가 끝나면 차근차근 실행되기 때문에 다음부터 변한다.(비동기적) 
