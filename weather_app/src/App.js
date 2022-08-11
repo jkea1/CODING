@@ -6,7 +6,6 @@ import WeatherButton from './component/WeatherButton';
 import ClipLoader from "react-spinners/ClipLoader";
 
 
-
 //1. 앱이 실행되자마자 현재위치기반의 날씨가 보인다. 
 //  ~ useEffect 사용하기 
 //2. 현재 도씨, 섭씨 화씨 날씨 상태 
