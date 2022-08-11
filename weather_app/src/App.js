@@ -55,7 +55,7 @@ function App() {
     }else{
       getWeatherByCity();
     }
-  }, [city]) 
+  }, [city]);
   //array 안에 아무것도 넣지 않으면 render를 하고 나서 실행을 시킨다. componentdidmount()처럼 행동한다. 
   //city state를 주시하고 있다가 city가 바뀌면  위의 console.log가 실행된다. 
   
