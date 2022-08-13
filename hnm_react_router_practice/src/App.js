@@ -1,24 +1,13 @@
-import logo from './logo.svg';
+//1. 전체상품페이지, 로그인페이지, 상품상세페이지
+//2. 전체 상품페이지: 전체상품 볼 수 있다. 
+//3. 로그인 버튼을 누르면 로그인 페이지가 보인다. 
+//4. 상품디테일을 눌렀으나, 로그인인 안돼 있을 경우에는 로그인 페이지가 먼저 나온다. 
+//5. 로그인이 돼 있을 경우에는 상품 디테일 페이지를 볼 수 있다. 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div></div>
   );
 }
 
