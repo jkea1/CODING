@@ -1,27 +1,17 @@
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import React from 'react'
+import Mbtipage from './page/mbtipage';
+import { Preference } from './page/preference';
 
-function App() {
-  const mbtiList = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-  ]
+const App = () => {
   return (
     <div>
-      <div>
-        {mbtiList.map((mbti) => (
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToppz55Pdmw3ijkiuOuiOkmDZvMIxPSh6ZGg&usqp=CAU" alt="애플로고" />
-          <div>{mbti}</div>
-          )
-          )}
-      </div>
+      <Routes>
+        <Route path="/" element={<Mbtipage/>}/>;
+        <Route path="/preference" element={<Preference/>}/>
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
