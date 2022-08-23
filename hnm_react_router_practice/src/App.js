@@ -8,21 +8,29 @@
 //7. 로그아웃이 되면 상품 디테일 페이지를 볼수 없다. 다시 로그인페이지가 보인다. 
 //8. 로그인을 하면 로그아웃이 보이고 로그아웃을 하면 로그인이 보인다. 
 //9. 삼품을 검색할 수 있다. 
+import { useState } from 'react';
 import './App.css';
 import { Routes, Route} from "react-router-dom";
 import ProductAll from './page/ProductAll';
 import ProductDetail from './page/ProductDetail';
 import Login from './page/Login';
 import Navbar from './component.js/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
+  /* 로그인한 유저인지 아닌지를 구분하기 위해 state를 만든다. false면 로그인이 안됐다. true면 로그인 된것이다. */
+  /* 로그인 버튼을 클릭하면 authenticate의 값이 true로 바뀌어야 한다. 버튼을 눌렀을때 event를 만들어줘야 한다.  */
+  /* authenticate 값을 바꾸기 위해서 setAuthenticate 함수를 써야 하는데 이 함수를 당연히 Login 컴포넌트에서 사용해 줘야한다.  */
+  /* 그러기 위해서는 setAuthenticate를 props로 보내버리면 된다. */
+  const[authenticate, setAuthenticate] = useState(false); 
+
   return (
     <div>
       <Navbar/>
       <Routes>
         <Route path="/" element={<ProductAll/>} />
-        <Route path="/login" element={<Login/>} />
+        <Route path="/login" element={<Login setAuthenticate={setAuthenticate}/>} /> {/* 함수도 props로 보내줄 수 있다. 그러면 Login 함수(컴포넌트)는 props로 setAuthenticate를 받아 볼수 있다. */}
         <Route path="/product/:id" element={<ProductDetail/>} />
       </Routes>
     </div>
