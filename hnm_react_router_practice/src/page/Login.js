@@ -2,13 +2,17 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = ({setAuthenticate}) => {
 
+    const navigate = useNavigate()
     const loginUser = (event) => { /* event를 받아온다 */
         event.preventDefault(); /* form에서는 사용해 주는것이 좋다. 페이지가 계속 refresh 되는것을 막을 수 있다. event에서 주는 이럴때 쓰는 함수이다. */
         console.log("login user function issue");
+        setAuthenticate(true);
+        navigate("/");
     };
 
     return (

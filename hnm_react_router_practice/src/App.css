@@ -26,7 +26,12 @@
 
 }
 
-.search {
+.search-box {
     display: flex;
     align-items: center;
+}
+
+.product-img {
+    display: flex;
+    justify-content: flex-end;
 }

@@ -16,6 +16,8 @@ import ProductDetail from './page/ProductDetail';
 import Login from './page/Login';
 import Navbar from './component.js/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect } from 'react';
+import PrivateRoute from './route/PrivateRoute';
 
 
 function App() {
@@ -24,6 +26,9 @@ function App() {
   /* authenticate 값을 바꾸기 위해서 setAuthenticate 함수를 써야 하는데 이 함수를 당연히 Login 컴포넌트에서 사용해 줘야한다.  */
   /* 그러기 위해서는 setAuthenticate를 props로 보내버리면 된다. */
   const[authenticate, setAuthenticate] = useState(false); 
+  useEffect(() => {
+    console.log("Aaaa : ", authenticate);
+  },[authenticate]); /* authenticate 값이 바뀔때 마다 useEffect 가 실행된다. */
 
   return (
     <div>
@@ -31,7 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ProductAll/>} />
         <Route path="/login" element={<Login setAuthenticate={setAuthenticate}/>} /> {/* 함수도 props로 보내줄 수 있다. 그러면 Login 함수(컴포넌트)는 props로 setAuthenticate를 받아 볼수 있다. */}
-        <Route path="/product/:id" element={<ProductDetail/>} />
+        <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate}/>} /> {/* 보호해 줘야 하는 페이지이다. */}
       </Routes>
     </div>
   );

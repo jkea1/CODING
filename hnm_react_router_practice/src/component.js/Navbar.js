@@ -23,6 +23,15 @@ const Navbar = () => {
     const goToLogin = () => {
         navigate("/login");
     };
+    
+    const search = (event) => { /* onKeyPress에서 넘겨받은 event를 가지고 이용한다.  */
+        if(event.key === "Enter"){
+            //입력한 검색어를 읽어와서 
+            let keyword = event.target.value; //이건 외워야 겠다. event.target.value를 통해서 input으로 받은 값을 불러온다.
+            //url(만)을 바꿔준다. 
+            navigate(`/?q=${keyword}`) //파라미터 값이 아닌 쿼리값을 불러오는 것이기 때문에 ?q=검색어 를 불어와야 한다. 
+        }
+    };
 
     return (
         <div>
@@ -39,9 +48,9 @@ const Navbar = () => {
                 <ul className="menu-list">
                     {menuList.map((menu) => (<li>{menu}</li>))}  
                 </ul>
-                <div className='search'>
+                <div className='search-box'>
                     <FontAwesomeIcon icon ={faSearch}/>
-                    <input type="text" />
+                    <input type="text" onKeyPress={(event) => search(event)}/> {/* 텍스트를 입력하는 등 key를 누르면 함수 search가 실행된다. & onKeyPress와 같은 모든 이벤트리스너는 event를 매개변수로 넘겨준다. 이 event를 함수 search가 받게 한다. */}
                 </div>
             </div>
         </div>
