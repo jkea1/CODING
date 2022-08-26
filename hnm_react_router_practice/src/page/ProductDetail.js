@@ -10,8 +10,8 @@ const ProductDetail = () => {
     const getProductDetail = async() => { /* await을 쓰면 async을 써야 한다. */
         let url = `https://my-json-server.typicode.com/jkea1/hnm/products/${id}`;  /* ${} 안에 들어갈 id 값은 어디서 받아오나? ~ url 파라미터 값으로 id를 넘겨주고 있으니 이 숫자를 읽어서 json 서버에 넘겨주면 된다. 이 숫자를 읽는 방법은 useParams 이다!  */
         // url fetch 하는 과정 눈감고 써야 한다. 
-        let response = await fetch(url) ;/* url은 곧 가져오고자 하는 데이터가 있는 주소지 이고, 여기서 통신해서 response를 통해 json 형식으로 데이터를 반환하여 사용할 수 있다.  */
-        let data = await response.json() ;/* data로 response의 json 값을 가져온다. */
+        let response = await fetch(url);/* url은 곧 가져오고자 하는 데이터가 있는 주소지 이고, 여기서 통신해서 response를 통해 json 형식으로 데이터를 반환하여 사용할 수 있다.  */
+        let data = await response.json();/* data로 response의 json 값을 가져온다. */
         console.log(data);
         setProduct(data); /* getProductDetail 페이지를 호출할때 마다 data를 가지고 올 수 있게 된다.  */
     };
