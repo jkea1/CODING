@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import {Navbar, Container, Form, Button, Nav,} from "react-bootstrap";
+import {Navbar, Container, Form, Button, Nav} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
@@ -10,7 +10,8 @@ const Navigation = () => {
             <Navbar.Brand href="#">
                 <img 
                 width={100}
-                src="https://i.pinimg.com/originals/08/68/dc/0868dcacc7c50ca2c7d35b27be81e5a9.png" alt="넷플릭스 로고"/>
+                src="https://i.pinimg.com/originals/08/68/dc/0868dcacc7c50ca2c7d35b27be81e5a9.png" alt="넷플릭스 로고"
+                />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">

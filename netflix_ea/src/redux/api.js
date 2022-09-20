@@ -5,7 +5,8 @@ const api = axios.create({
     headers: {"Content-type" : "application/json"}
 });
 
-// Add a request interceptor
+//interceptor는 굳이 없어도 된다. 
+// Add a request interceptor, api에 interceptors울 더한다. 
 api.interceptors.request.use(function (config) {
         // Do something before request is sent
         console.log("request start", config);
