@@ -29,7 +29,10 @@ export default function App() {
       <h2>Start editing to see some magic happen!</h2>
       <div style={{ position: "relative" }}>
         <Carousel responsive={responsive}>
-          <div>Item 1</div>
+          <div>
+            <div>img</div>
+            <div>title</div>
+          </div>
           <div>Item 2</div>
           <div>Item 3</div>
           <div>Item 4</div>
