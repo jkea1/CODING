@@ -19,7 +19,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import PrivateRoute from './route/PrivateRoute';
 
-
 function App() {
   /* 로그인한 유저인지 아닌지를 구분하기 위해 state를 만든다. false면 로그인이 안됐다. true면 로그인 된것이다. */
   /* 로그인 버튼을 클릭하면 authenticate의 값이 true로 바뀌어야 한다. 버튼을 눌렀을때 event를 만들어줘야 한다.  */

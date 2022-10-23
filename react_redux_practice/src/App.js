@@ -39,7 +39,7 @@ export default function App() {
     </div>
   );
 }
-function Left1(props) {
+function Left1() {
   return (
     <div>
       <h1>Left1 :</h1>
@@ -47,7 +47,7 @@ function Left1(props) {
     </div>
   );
 }
-function Left2(props) {
+function Left2() {
   console.log('2');
   return (
     <div>
@@ -56,7 +56,7 @@ function Left2(props) {
     </div>
   );
 }
-function Left3(props) {
+function Left3() {
   console.log('3');
   const number = useSelector((state) => state.number); 
   //number값을 유선으로 연결하고 싶은거다. 
@@ -67,7 +67,7 @@ function Left3(props) {
     </div>
   );
 }
-function Right1(props) {
+function Right1() {
   return (
     <div>
       <h1>Right1</h1>
@@ -75,7 +75,7 @@ function Right1(props) {
     </div>
   );
 }
-function Right2(props) {
+function Right2() {
   return (
     <div>
       <h1>Right2</h1>
@@ -83,7 +83,7 @@ function Right2(props) {
     </div>
   );
 }
-function Right3(props) {
+function Right3() {
   const dispatch = useDispatch();
   return (
     <div>
